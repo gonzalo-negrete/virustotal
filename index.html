@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analizador de Archivos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .response-table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Analizador de Archivos</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Análisis de Archivo</h2>
+                <input type="file" id="fileInput" class="form-control mb-3">
+                <button onclick="analyzeFile()" class="btn btn-primary">Analizar Archivo</button>
+            </div>
+            <div class="col-md-6">
+                <h2>Análisis de URL</h2>
+                <input type="text" id="urlInput" class="form-control mb-3">
+                <button onclick="scanUrl()" class="btn btn-primary">Analizar URL</button>
+            </div>
+        </div>
+        <div class="response-table">
+            <h3>Resultados:</h3>
+            <div id="result" class="mt-3"></div>
+        </div>
+    </div>
+</body>
+</html>
